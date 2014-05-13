@@ -1,0 +1,332 @@
+{
+    "actions": [
+        {
+            "id":"x",
+            "synonyms":["x", "examine","search"],
+            "requires":["object"],
+            "patterns":["this","object"]
+        },
+        {
+            "id":"l",
+            "synonyms":["l","look","view","see"],
+            "requires":[],
+            "patterns":["this"]
+        },
+        {
+            "id":"take",
+            "synonyms":["take","get","grab","pick up"],
+            "requires":["object"],
+            "patterns":["this","object"]
+        },
+        {
+            "id":"drop",
+            "synonyms":["drop","lose","leave"],
+            "requires":["object"],
+            "patterns":["this","object"]
+        },
+        {
+            "id":"give",
+            "synonyms":["give","gift","grant"],
+            "requires":["object","npc"],
+            "patterns":["this","object","_to","npc"]
+        },
+        {
+            "id":"go",
+            "synonyms":["go","walk","run"],
+            "requires":["direction"],
+            "patterns":["this","direction"]
+
+        },
+        {
+            "id":"follow",
+            "synonyms":["follow","trail"],
+            "requires":["npc"],
+            "patterns":["this","npc"]
+        },
+        {
+            "id":"open",
+            "synonyms":["open","unlock"],
+            "requires":["object"],
+            "patterns":[
+                ["this","object"],
+                ["this","object","_with","object"]
+            ]
+        },
+        {
+            "id":"put",
+            "synonyms":["put","insert"],
+            "requires":["object","preposition","object"],
+            "patterns":["this","object","preposition","object"]
+        },
+        {
+            "id":"don",
+            "synonyms":["don","wear"],
+            "requires":["object"],
+            "patterns":["this","object"]
+
+        },
+        {
+            "id":"doff",
+            "synonyms":["doff","remove"],
+            "requires":["object"],
+            "patterns":["this","object"]
+        },
+        {
+            "id":"ask",
+            "synonyms":["ask"],
+            "requires":["npc"],
+            "patterns":["this","npc","_about|_for","npc|room|object"]
+        },
+        {
+            "id":"talk",
+            "synonyms":["talk","speak","discuss"],
+            "requires":["npc"],
+            "patterns":["this","preposition","npc"]
+        },
+        {
+            "id":"z",
+            "synonyms":["z","wait","stall"],
+            "requires":[],
+            "patterns":["this"]
+        },
+        {
+            "id":"repeat",
+            "synonyms":["repeat","again","redo"],
+            "requires":[],
+            "patterns":["this"]
+        },
+        {
+            "id":"xyzzy",
+            "synonyms":["xyzzy"],
+            "requires":[],
+            "patterns":["this"]
+        }
+    ],
+    "directions":[
+        {
+            "id":"n",
+            "synonyms":["n","north"]
+
+        },
+        {
+            "id":"ne",
+            "synonyms":["ne","northeast"]
+
+        },
+        {
+            "id":"e",
+            "synonyms":["e","east"]
+        },
+        {
+            "id":"se",
+            "synonyms":["se","southeast"]
+        },
+        {
+            "id":"s",
+            "synonyms":["s","south"]
+
+        },
+        {
+            "id":"sw",
+            "synonyms":["sw","southwest"]
+        },
+        {
+            "id":"w",
+            "synonyms":["w","west"]
+        },
+        {
+            "id":"nw",
+            "synonyms":["nw","northwest"]
+        },
+        {
+            "id":"u",
+            "synonyms":["u","up","ascend"]
+        },
+        {
+            "id":"d",
+            "synonyms":["d","down","descend"]
+        }
+    ],
+    "families":[
+        {
+            "id":"driveway",
+            "type":"room",
+            "children":["001","002"]
+        },
+        {
+            "id":"door",
+            "type":"room",
+            "children":["003"]
+        },
+        {
+            "id":"car",
+            "type":"object",
+            "children":["001","002"]
+        }
+
+    ],
+    "npcs":[
+
+    ],
+    "objects":[
+        {
+            "id": "blue sedan",
+            "display_name": "blue sedan",
+            "synonyms":["car","blue car","sedan","dark blue Bentley 3.5-liter sedan"],
+            "family":"car",
+            "descriptions":{
+                "x":null,
+                "conditions":{
+
+                }
+            },
+            "contains":{
+                "objects":[],
+                "npcs":[],
+                "player":false
+            },
+            "size":999,
+            "visible":true,
+            "known":false
+        },
+        {
+            "id": "red sport car",
+            "display_name": "red sport car",
+            "synonyms":["car","red car","sporty red MG convertible"],
+            "family":"car",
+            "descriptions":{
+                "x":null,
+                "conditions":{
+
+                }
+            },
+            "contains":{
+                "objects":[],
+                "npcs":[],
+                "player":false
+            },
+            "size":999,
+            "visible":true,
+            "known":false
+        }
+    ],
+    "prepositions":[
+        "about",
+        "above",
+        "across",
+        "after",
+        "against",
+        "around",
+        "at",
+        "before",
+        "behind",
+        "below",
+        "beneath",
+        "beside",
+        "besides",
+        "between",
+        "beyond",
+        "by",
+        "during",
+        "except",
+        "for",
+        "from",
+        "in",
+        "inside",
+        "into",
+        "like",
+        "near",
+        "of",
+        "off",
+        "on",
+        "out",
+        "outside",
+        "over",
+        "since",
+        "through",
+        "throughout",
+        "till",
+        "to",
+        "toward",
+        "under",
+        "until",
+        "upon",
+        "with",
+        "without"
+    ],
+    "rooms":[
+        {
+            "id": "driveway entrance",
+            "display_name": "driveway entrance",
+            "synonyms":["driveway entrance","driveway","drive"],
+            "family":"driveway",
+            "exits":{
+                "n":"driveway"
+            },
+            "descriptions":{
+                "first":"You are standing at the foot of the driveway, the entrance to the Linder property. The entire lot is screened from the street and the neighbors by a wooden fence, except on the east side, which fronts on dense bamboo woods. The house looks like a mixture of a California bungalow and East Asian influences. From here you can see the driveway leading north and, beyond that, the front door.",
+                "l":"",
+                "conditions":{
+
+                }
+            },
+            "contains":{
+                "objects":[],
+                "npcs":[],
+                "player":false
+            },
+            "known":false
+        },
+        {
+            "id":"driveway",
+            "display_name":"driveway",
+            "synonyms":["driveway","drive"],
+            "family":"driveway",
+            "exits":{
+                "n":"front porch",
+                "e":"garage",
+                "s":"driveway entrance"
+            },
+            "descriptions":{
+                "first":"The driveway, paved with peastone, runs from the entrance at the south end in a curve to a two-car garage at the east end. North of you is the front porch, the entrance to the house.",
+                "l":"",
+                "conditions":{
+
+                }
+            },
+            "contains":{
+                "objects":[],
+                "npcs":[],
+                "player":false
+            },
+            "known":false
+        },
+        {
+            "id":"garage",
+            "display_name":"garage",
+            "synonyms":["garage","two-car garage", "car port"],
+            "family":null,
+            "exits":{
+                "n":"backyard",
+                "e":"kitchen",
+                "w":"driveway"
+            },
+            "descriptions":{
+                "first":"The garage, like a car port, has no door to keep the cars in. Doors lead north and east. The walls are decorated with spare tires and things. One car is a sporty red MG convertible. The other car is a dark blue Bentley 3.5-liter sedan.",
+                "l":"",
+                "conditions":{
+
+                }
+            },
+            "contains":{
+                "objects":["blue sedan","red sport car"],
+                "npcs":[],
+                "player":false
+            },
+            "known":false
+        }
+    ],
+    "rules":[
+
+    ]
+}

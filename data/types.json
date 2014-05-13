@@ -1,0 +1,34 @@
+{
+    "player":{
+        "contains":true,
+        "containable":false,
+        "acts":true,
+        "moves":true,
+        "speaks":true,
+        "mapped":false
+    },
+    "room":{
+        "contains":true,
+        "containable":false,
+        "acts":false,
+        "moves":false,
+        "speaks":false,
+        "mapped":true
+    },
+    "object":{
+        "contains":true,
+        "containable":true,
+        "acts":false,
+        "moves":true,
+        "speaks":false,
+        "mapped":false
+    },
+    "npc":{
+        "contains":true,
+        "containable":true,
+        "acts":true,
+        "moves":true,
+        "speaks":true,
+        "mapped":false
+    }
+}
